@@ -1,16 +1,19 @@
-const taskForm = document.getElementById('task-form')
-const taskInput = document.getElementById('task-input')
-const taskList = document.getElementById('task-list')
 
-taskForm.addEventListener('submit', function(event) {
-    event.preventDefault()
+document.addEventListener('DOMContentLoaded', function() {
+    const taskForm = document.getElementById('task-form')
+    const taskInput = document.getElementById('task-input')
+    const taskList = document.getElementById('task-list')
 
-    const taskText = taskInput.value
+    taskForm.addEventListener('submit', function(event) {
+        event.preventDefault()
 
-    const li = document.createElement('li')
-    li.textContent = taskText
+        const taskText = taskInput.value
 
-    taskList.appendChild(li)
+        const li = document.createElement('li')
+        li.textContent = taskText
 
-    taskInput.value = ''
+        taskList.appendChild(li)
+
+        taskInput.value = ''
+    })
 })
