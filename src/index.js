@@ -1,12 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // your code here
-});
 const taskForm = document.getElementById('task-form')
 const taskInput = document.getElementById('task-input')
 const taskList = document.getElementById('task-list')
 
 taskForm.addEventListener('submit', function(event) {
-    event.preventDefault()  // stops page from refreshing
+    event.preventDefault()
 
     const taskText = taskInput.value
 
@@ -15,5 +12,5 @@ taskForm.addEventListener('submit', function(event) {
 
     taskList.appendChild(li)
 
-    taskInput.value = ''  // clears the input after submission
+    taskInput.value = ''
 })
